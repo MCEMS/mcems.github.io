@@ -7,6 +7,8 @@ Style
 
 Use the [GitHub JavaScript Styleguide](https://github.com/styleguide/javascript) for your CoffeeScript. Also, use CoffeeScript for more readable code.
 
+Indentation: two spaces.
+
 Testing
 =======
 
