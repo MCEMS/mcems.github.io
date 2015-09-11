@@ -1,0 +1,9 @@
+- url: /index.html
+  name: Background
+- url: /design.html
+  name: Design
+- url: /collaboration.html
+  name: Collaboration
+- url: /code.html
+  name: Coding Standards
+

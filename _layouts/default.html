@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/bower/primer-css/css/primer.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bower/primer-markdown/dist/user-content.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/site.css">
+  </head>
+  <body>
+    <header class="global-header">
+      <div class="container">
+        <h1>MCEMS Documentation</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="columns">
+        <div class="one-fourth column">
+          <!-- nav -->
+          <nav class="menu">
+            {% for item in site.data.nav %}
+              <a class="menu-item {% if page.url == item.url %}selected{% endif %}" href="{{ item.url }}">{{ item.name }}</a>
+            {% endfor %}
+          </nav>
+
+          <nav class="menu">
+            <a class="menu-item" href="https://mcems.slack.com">Slack</a>
+            <a class="menu-item" href="https://dashboard.heroku.com">Heroku Dashboard</a>
+            <a class="menu-item" href="https://travis-ci.org/MCEMS">Travis CI</a>
+            <a class="menu-item" href="https://github.com/MCEMS">GitHub Code</a>
+          </nav>
+        </div>
+        <div class="three-fourths column">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <p>&copy; 2015</p>
+    </footer>
+  </body>
+</html>
+
